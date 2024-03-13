@@ -1,13 +1,13 @@
 import React from "react";
 
-const SearchBar = ({keyword, keywordChange}) => {
+const SearchBar = ({ keyword, keywordChange }) => {
   return (
-    <input 
+    <input
       type="text"
       className="search-bar"
       placeholder="Search title notes"
       value={keyword}
-      onChange={(event) => keywordChange(event.target.value)}/>
+      onChange={(event) => keywordChange(event.target.value)} />
   );
 }
 
