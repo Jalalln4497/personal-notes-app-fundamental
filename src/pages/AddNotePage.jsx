@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import AddNewNoteButton from "../components/AddNewNoteButton";
 import InputNote from "../components/InputNote";
@@ -48,10 +49,16 @@ class AddNotePage extends React.Component {
           body={this.state.body}
           changeTitleHandler={this.onChangeTitleHandler.bind(this)}
           changeBodyHandler={this.onChangeBodyHandler.bind(this)} />
-        <AddNewNoteButton addNoteHandler={this.onAddNoteHandler.bind(this)} />
+        <section className="homepage__action">
+          <AddNewNoteButton addNoteHandler={this.onAddNoteHandler.bind(this)} />
+        </section>
       </section>
     );
   }
+}
+
+AddNotePage.propTypes = {
+  navigate: PropTypes.func.isRequired,
 }
 
 export default AddNotePageWrapper;

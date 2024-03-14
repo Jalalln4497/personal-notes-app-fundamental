@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { showFormattedDate } from "../utils/index";
 
@@ -10,6 +11,13 @@ const NoteItem = ({ title, body, createdAt, id }) => {
       <p className="note-item__body">{body}</p>
     </article>
   );
+}
+
+NoteItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  createdAt: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 }
 
 export default NoteItem;
